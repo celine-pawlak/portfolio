@@ -7,7 +7,10 @@ html, body{
   color: white;
 }
 body{
-  display: grid;
+  display: flex;
+}
+a{
+  text-decoration: none;
 }
 
 /* HEADER */
@@ -16,45 +19,97 @@ header{
   width: 100%;
   position:fixed;
   top:0;
+  background-color: rgba(70,110,255,0.25);
+
 }
 nav{
   max-width: 1300px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: 0 auto;
+  font-family: 'Crimson Text', serif;
 }
-.liste-deroulante{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.h1_header{
+  flex:1;
+  padding: 0.5rem 0 0.5rem 1;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 24px;
+  margin: 0;
+}
+.liste_deroulante{
+  flex:1;
+  display: flex;
+  flex-direction: row;
   padding: 0;
+  font-size: 20px;
+  margin: 0;
 }
-.liste-deroulante li{
+.liste_deroulante li{
   list-style: none;
   text-align: center;
   align-self: center;
+  flex:1;
+  padding: 0.5rem 0 0.5rem 0;
+  border-radius: 10px 10px 0 0;
+  transition: background-color ease-in-out 0.01s;
 }
-.sous-liste{
+.liste_deroulante li:hover{
+  background-color: black;
+}
+.sous_liste{
   position: absolute;
   visibility: hidden;
+  margin-top: 0.5rem;
+  border-top: 2px solid white;
+  padding: 0 0.5rem;
+  background-color: rgba(70,110,255,0.25);
 }
-.liste-deroulante-titre:hover .sous-liste{
+.liste_deroulante_titre:hover .sous_liste{
   visibility: visible;
+}
+.fleche_bas{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.liste_deroulante_titre a{
+  color:white;
 }
 
 /* MAIN */
 
+main{
+  width: 100%;
+  margin: 0 auto;
+}
 .accroche{
-  height:100vh;
-  display: grid;
-  background-image: url("islande.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-image: url("src/images/stars_wallpaper.jpg");
+  background-attachment: fixed;
   background-size: cover;
   justify-content: center;
   align-items: center;
-
+  transition: all ease-in-out 0.5s;
 }
-.accroche-principale{
+.accroche_principale{
   margin: 0;
-
+  max-width: 1400px;
+  font-family: 'Crimson Text', serif;
+  font-weight:bold;
+  font-size: 26px;
+  transition: all ease-in-out 0.5s;
+  border-top: 1px solid white;
+}
+.accroche_principale:hover{
+  font-size: 50px;
+}
+h2{
+  text-align: center;
 }
