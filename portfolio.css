@@ -16,6 +16,7 @@ html, body{
 }
 body{
   display: flex;
+  flex-direction: column;
 }
 a{
   text-decoration: none;
@@ -24,6 +25,10 @@ a{
 }
 a:hover{
   font-size: 105%;
+}
+ul, li{
+  list-style: none;
+  padding: 0;
 }
 
 /* HEADER */
@@ -55,7 +60,7 @@ nav{
   font-weight: normal;
   font-style: italic;
   font-size: 24px;
-  margin: 0;
+  margin: 0 0.5rem;
 }
 .liste_deroulante{
   flex:1;
@@ -225,7 +230,111 @@ h2{
 
 /* ABOUT */
 
-.about img{
-  width: 2%;
+.about{
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+}
+.about a img{
+  width: 4%;
   vertical-align: bottom;
+}
+
+/* FOOTER */
+
+FOOTER{
+  width: 100%;
+  background-color: var(--color-darkblue);
+}
+.div_footer{
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height:130px;
+}
+.element_footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reseaux img{
+  width: 50px;
+  height: 50px;
+  margin: 0 0.5rem 0 0.5rem;
+}
+.reseaux img, .element_footer p:nth-child(2){
+  transition: transform ease-in-out 0.05s;
+}
+.reseaux img:hover, .element_footer p:nth-child(2):hover{
+  transform: scale(1.1);
+}
+.element_footer p:nth-child(2){
+  font-style: italic;
+}
+
+/* MINI MENU */
+
+.nav_mini{
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+.liste_deroulante_mini{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.liste_deroulante_titre_mini{
+  position: relative;
+}
+.sous_liste_mini{
+  position: absolute;
+  right: 0;
+}
+.fa-moon-stars:before {
+    content: "f755";
+}
+/* RESPONSIVE */
+
+@media screen and (max-width: 699px) {
+  .page_etoiles{
+    height: 70vh;
+  }
+  .h1_header, .liste_deroulante, .about, footer{
+    font-size: 80%;
+  }
+  .reseaux img{
+    width: 25px;
+    height: 25px;
+  }
+  .fleche_bas{
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+  }
+  .pages{
+    height: 100vh;
+  }
+}
+@media (max-width:399px) {
+  .projet{
+    min-width: 130px;
+    min-height: 73px;
+  }
+  .liste_deroulante{
+    display: none;
+  }
+}
+@media (min-width:400px) {
+  .nav_mini{
+    display: none;
+  }
 }

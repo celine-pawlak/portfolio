@@ -5,6 +5,8 @@
     <meta name="author" content="Céline Pawlak">
     <link rel="stylesheet" href="portfolio.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/fa.css">
     <title>Céline Pawlak's portfolio</title>
   </head>
   <body>
@@ -15,14 +17,29 @@
           <li class="liste_deroulante_titre"><a href="#my_work">My work <i class="fleche_bas"></i></a>
             <ul class="sous_liste">
               <li><a href="projet1.html">Error 404 page</a></li>
-              <li><a href="projet2.htm">Connexion/Registration</a></li>
-              <li><a href="projet3.htm">Favorite applications</a></li>
-              <li><a href="projet4.htm">Muse fansite</a></li>
+              <li><a href="projet2.html">Connexion/Registration</a></li>
+              <li><a href="projet3.html">Favorite applications</a></li>
+              <li><a href="projet4.html">Muse fansite</a></li>
             </ul>
           </li>
           <li><a href="#about">About</a></li>
-          <li>Contact</li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="nav_mini">
+          <i class="fas fa-moon-stars"></i>
+          <ul class="liste_deroulante_mini">
+            <li class="liste_deroulante_titre_mini"><a href="#my_work">My work <i class="fleche_bas"></i></a>
+              <ul class="sous_liste_mini">
+                <li><a href="projet1.html">Error 404 page</a></li>
+                <li><a href="projet2.html">Connexion/Registration</a></li>
+                <li><a href="projet3.html">Favorite applications</a></li>
+                <li><a href="projet4.html">Muse fansite</a></li>
+              </ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -32,43 +49,62 @@
       <div class="pages" id="my_work">
         <h2>My work</h2>
         <div class="projets">
-          <div class="projet projet_1">
-            <div class="text_projet">
-              <h3 class="h3_projet">Error 404 page</h3>
-              <p class="description_projet">Classical error page on Kirby's theme. This was my very first html/CSS project.</p>
+          <a href="projet1.html">
+            <div class="projet projet_1">
+              <div class="text_projet">
+                <h3 class="h3_projet">Error 404 page</h3>
+                <p class="description_projet">Classic error page on Kirby's theme. This was my very first html/CSS project.</p>
+              </div>
             </div>
-          </div>
-          <div class="projet projet_2">
-            <div class="text_projet">
-              <h3 class="h3_projet">Connexion/Registration</h3>
-              <p class="description_projet">Connexion, registration and "forgot password" pages. Html/CSS project</p>
+          </a>
+          <a href="projet2.html">
+            <div class="projet projet_2">
+              <div class="text_projet">
+                <h3 class="h3_projet">Connexion/Registration</h3>
+                <p class="description_projet">Connexion, registration and "forgot password" pages. Html/CSS project</p>
+              </div>
             </div>
-          </div>
-          <div class="projet projet_3">
-            <div class="text_projet">
-              <h3 class="h3_projet">Favorite applications</h3>
-              <p class="description_projet">This is my top 3 favorite applications. There is one page for each one. Html/CSS project</p>
+          </a>
+          <a href="projet3.html">
+            <div class="projet projet_3">
+              <div class="text_projet">
+                <h3 class="h3_projet">Favorite applications</h3>
+                <p class="description_projet">This is my top 3 favorite applications. There is one page for each one. Html/CSS project</p>
+              </div>
             </div>
-          </div>
-          <div class="projet projet_4">
-            <div class="text_projet">
-              <h3 class="h3_projet">Muse fansite</h3>
-              <p class="description_projet">This is a fansite of the famous music goup: Muse. There are various pages around the group itself. Html/CSS project</p>
+          </a>
+          <a href="projet4.html">
+            <div class="projet projet_4">
+              <div class="text_projet">
+                <h3 class="h3_projet">Muse fansite</h3>
+                <p class="description_projet">This is a fansite of the famous music goup: Muse. There are various pages around the group itself. Html/CSS project</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="page_etoiles">
         <div class="about" id="about">
           <p>I am Céline Pawlak, I am a web developper.</p>
-          <p>I started my code journey with
-            <a href="https://laplateforme.io/"><img src="src/images/PICT_LOGO_BLANC.png" alt="logo La Plateforme_">La Plateforme_</a>.</p>
+          <p>I started my code journey with <a href="https://laplateforme.io/"><img src="src/images/PICT_LOGO_BLANC.png" alt="logo La Plateforme_">La Plateforme_</a>.</p>
           <p>For now, I use Html and CSS only.</p>
         </div>
       </div>
     </main>
     <footer>
-
+    <div class="div_footer" id="contact">
+      <div class="element_footer">
+        <p>Follow me on :</p>
+        <div class="reseaux">
+          <a href="https://www.linkedin.com/in/c%C3%A9line-pawlak-a62224151/"><img src="src/images/In-White-72.png" alt="Logo LinkedIn"></a>
+          <a href="https://github.com/celine-pawlak"><img src="src/images/GitHub-Mark-Light-64px.png" alt="Logo GitHub"></a>
+        </div>
+      </div>
+      <div class="element_footer">
+        <p>Contact me :</p>
+        <p>celine.pawlak@laplateforme.io</p>
+      </div>
+    </div>
     </footer>
   </body>
 </html>
