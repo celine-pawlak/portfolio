@@ -1,3 +1,10 @@
+:root{
+  --color-white:white;
+  --color-blue:rgba(35,51,111,1);
+  --color-darkblue:rgba(0, 5, 25, 1);
+}
+
+
 html, body{
   margin: 0;
   padding: 0;
@@ -5,30 +12,42 @@ html, body{
   width: 100%;
   height:100%;
   color: white;
+  font-family: 'Lato', sans-serif;
 }
 body{
   display: flex;
 }
 a{
   text-decoration: none;
+  color: inherit;
+  transition: font-size ease-in-out 0.01s;
+}
+a:hover{
+  font-size: 105%;
 }
 
 /* HEADER */
 
 header{
   width: 100%;
+  height: 50px;
   position:fixed;
   top:0;
   background-color: rgba(70,110,255,0.25);
-
+  z-index: 3;
+  transition: background-color ease-in-out 0.1s;
+}
+header:hover{
+  background-color: var(--color-blue);
 }
 nav{
   max-width: 1300px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
-  font-family: 'Crimson Text', serif;
+  height: 100%;
 }
 .h1_header{
   flex:1;
@@ -59,18 +78,24 @@ nav{
 .liste_deroulante li:hover{
   background-color: black;
   border-bottom: 1px solid white;
-
+}
+.liste_deroulante_titre{
+  position: relative;
 }
 .sous_liste{
   box-sizing: border-box;
   position: absolute;
+  opacity: 0;
   visibility: hidden;
   margin-top: 0.5rem;
   border-top: 1px solid white;
   padding: 0 0.5rem;
-  background-color: rgba(70,110,255,0.25);
+  background-color: rgba(35,51,111,1);
+  transition: opacity ease-in-out .2s;
+  width: 150%;
 }
 .liste_deroulante_titre:hover .sous_liste{
+  opacity: 1;
   visibility: visible;
 }
 .fleche_bas{
@@ -94,7 +119,7 @@ main{
   width: 100%;
   margin: 0 auto;
 }
-.accroche{
+.page_etoiles{
   height: 100vh;
   width: 100%;
   display: flex;
@@ -103,12 +128,10 @@ main{
   background-size: cover;
   justify-content: center;
   align-items: center;
-  transition: all ease-in-out 0.5s;
 }
 .accroche_principale{
   margin: 0;
   max-width: 1400px;
-  font-family: 'Crimson Text', serif;
   font-weight:bold;
   font-size: 26px;
   transition: all ease-in-out 0.5s;
@@ -123,24 +146,53 @@ h2{
 
 /* PROJETS */
 
+.pages{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items:center;
+  border-bottom: 0.5px solid var(--color-white);
+  border-top: 0.5px solid var(--color-white);
+  background-color: var(--color-darkblue);
+}
+h2{
+  top:8%;
+  position: absolute;
+}
 .projets{
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 .projet{
-  border: 1px solid white;
+  border: 1px solid grey;
   position: relative;
   min-width: 320px;
   min-height: 180px;
+  background-size: cover;
+  margin: .5rem;
+}
+.projet:hover{
+  border: 1px solid var(--color-white);
+  box-shadow: 0 0 10px 3.5px var(--color-blue);
 }
 .projet_1{
   background-image: url("src/images/page_404.jpg");
-  background-size: cover;
+}
+.projet_2{
+  background-image: url("src/images/connexion_registration.jpg");
+}
+.projet_3{
+  background-image: url("src/images/favorite_aplications.jpg");
+}
+.projet_4{
+  background-image: url("src/images/fansite.jpg");
 }
 .text_projet{
   position: absolute;
@@ -151,7 +203,7 @@ h2{
   background-color: white;
   color:black;
   margin: 0;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.3s;
 }
 .h3_projet{
   margin: 0.2rem 0.2rem 0.2rem 1rem;
@@ -159,7 +211,8 @@ h2{
 .description_projet{
   opacity: 0;
   position: absolute;
-  transition: opacity ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.3s;
+  padding: 0 .5rem;
 }
 .projet:hover .description_projet{
   opacity: 1;
@@ -167,5 +220,12 @@ h2{
 }
 .projet:hover .text_projet{
   top:0;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.7);
+}
+
+/* ABOUT */
+
+.about img{
+  width: 2%;
+  vertical-align: bottom;
 }
