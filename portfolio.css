@@ -61,6 +61,7 @@ nav{
   font-style: italic;
   font-size: 24px;
   margin: 0 0.5rem;
+  white-space: nowrap;
 }
 .liste_deroulante{
   flex:1;
@@ -236,7 +237,7 @@ h2{
   font-size: 20px;
 }
 .about a img{
-  width: 4%;
+  width: 30px;
   vertical-align: bottom;
 }
 
@@ -280,30 +281,48 @@ FOOTER{
 
 .nav_mini{
   flex: 1;
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
-  width: 100%;
+  position: relative;
+  padding-right: 2rem;
 }
 .liste_deroulante_mini{
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  right:-999px;
+  transition: all ease-in-out 0.1s;
+  background: var(--color-blue);
+  width: 250px;
+  text-align: right;
+  padding: 1rem 1rem 0 0;
+  border-radius: 0 0 0 10px;
 }
-.liste_deroulante_titre_mini{
-  position: relative;
+.fa-moon-stars:hover ~ .liste_deroulante_mini{
+  opacity: 1;
+  visibility: visible;
+  right:0px;
 }
-.sous_liste_mini{
-  position: absolute;
-  right: 0;
+.sous_liste_mini li{
+  font-style: italic;
+  font-size: 90%;
 }
-.fa-moon-stars:before {
-    content: "f755";
+.liste_deroulante_mini > li{
+  margin: .5rem 0;
 }
+.liste_deroulante_mini li:hover >a{
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
 /* RESPONSIVE */
 
+@media (min-width:400px) {
+  .nav_mini{
+    display: none;
+  }
+}
 @media screen and (max-width: 699px) {
   .page_etoiles{
     height: 70vh;
@@ -315,26 +334,38 @@ FOOTER{
     width: 25px;
     height: 25px;
   }
-  .fleche_bas{
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid white;
-  }
   .pages{
     height: 100vh;
   }
 }
 @media (max-width:399px) {
   .projet{
-    min-width: 130px;
-    min-height: 73px;
+    min-width: 195px;
+    min-height: 109px;
+    margin: 0.5rem 0.1rem;
   }
   .liste_deroulante{
     display: none;
   }
-}
-@media (min-width:400px) {
-  .nav_mini{
-    display: none;
+  .text_projet{
+    top:75%;
+  }
+  .h3_projet{
+    font-size: 80%;
+  }
+  .div_footer{
+    flex-direction: column;
+  }
+  .element_footer{
+    margin: 0.4rem 0;
+  }
+  .accroche_principale{
+    font-size: 90%;
+  }
+  .pages{
+    height:70vh;
+  }
+  h2{
+    top:0;
   }
 }
