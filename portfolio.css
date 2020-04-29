@@ -362,14 +362,6 @@ FOOTER{
   flex-direction: column;
   align-items: center;
 }
-/* .more_pictures2{
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-} */
 .more_pictures2{
   max-width: 1400px;
   margin: 0 auto;
